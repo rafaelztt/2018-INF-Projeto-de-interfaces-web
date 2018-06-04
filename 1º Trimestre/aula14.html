@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Introdução jQuery</title>
+
+    <style media="screen">
+      #p2, #p3{
+        display: none;
+      }
+    </style>
+
+    <!-- Importar a biblioteca jQuery -->
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <script>
+    // Declara o início do código jQuery
+    $(document).ready( function(){
+
+      // Aqui vai todo jQuery do site
+      //alert("Tudo ok!");
+
+      // No lugar do clique pode usar o evento mouseenter
+      // Que serve só de passar o mouse por cima
+
+      // Criando um evento de clique nos p
+      $("#aba1").click(function(){
+
+        $("#p2, #p3").hide();
+        $("#p1").fadeIn();
+
+      });
+      // Criando um evento de clique nos p
+      $("#aba2").click(function(){
+
+        $("#p1, #p3").hide();
+        $("#p2").fadeIn();
+
+      });
+      // Criando um evento de clique nos p
+      $("#aba3").click(function(){
+
+        $("#p2, #p1").hide();
+        $("#p3").fadeIn();
+
+      });
+
+      // Quando clicar no pesquisar, verificar o campo parágrafo
+      $("#pesquisar").click(function(){
+
+        //Cria uma variável com o texto que está no campo palavra
+        var texto = $("#palavra").val();
+
+        // Se for vazio, informar uma mensagem
+        if(texto == ""){
+          alert("Preencha o termo de busca!");
+          // Da foco no campo
+          $("#palavra").focus();
+
+        } else {
+          alert("Pesquisando sobre: " + texto);
+        }
+        
+      });
+
+
+     });
+    </script>
+
+  </head>
+
+  <body>
+    <h3>Introdução ao jQuery</h3>
+
+    <a href="#" id="aba1">Aba 1</a>
+    <a href="#" id="aba2">Aba 2</a>
+    <a href="#" id="aba3">Aba 3</a>
+
+    <p id="p1">Este é um exemplo de parágrafo.</p>
+
+    <p id='p2'>IFPR - Campus Paranavaí.</p>
+
+    <p id="p3">Projeto de Intercaces para Web.</p>
+
+    <hr>
+
+    <form action="" method="">
+      <label>Pesquisar:</label>
+      <input type="text" name="palavra" id="palavra"/>
+
+      <button type="button" id="pesquisar">
+        Pesquisar
+      </button>
+    </form>
+
+  </body>
+
+</html>
