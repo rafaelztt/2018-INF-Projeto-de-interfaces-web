@@ -3,7 +3,12 @@ git clone https://github.com/rafaelztt/interfaces_web.git
 
 
 
-Para enviar/atualizar seu projeto
+Para atualizar o projeto local
+git pull origin master
+
+
+
+Para enviar seu projeto para o git
 git add *
 
 git config user.email "rafael.zottesso@ifpr.edu.br"
