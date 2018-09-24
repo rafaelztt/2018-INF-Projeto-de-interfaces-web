@@ -1,5 +1,9 @@
+Baixar repositório
 git clone https://github.com/rafaelztt/interfaces_web.git
 
+
+
+Para enviar/atualizar seu projeto
 git add *
 
 git config user.email "rafael.zottesso@ifpr.edu.br"
